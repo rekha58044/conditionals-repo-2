@@ -6,9 +6,6 @@ jobs:
       matrix:
         os-version: [windows-latest, ubuntu-latest]
         node-version: [12,14,16]
-        include:
-          - node-version: 18
-            os-version: ubuntu-latest
         exclude:
           - node-version: [12,14]
             os-version: [windows-latest]

@@ -13,3 +13,11 @@ jobs:
         with:
           name: example-artifact
           path: artifact.txt
+  artifacts-download:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with: 
+          name: exmaple-artifact
+          path: artifact.txt

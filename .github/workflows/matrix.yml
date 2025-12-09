@@ -5,6 +5,7 @@ jobs:
     strategy:
       matrix:
         os-version: [windows-latest, ubuntu-latest]
+        node-version: [12,14,16,18]
     runs-on: ${{ matrix.os-version }}
     steps:
     - name: checkout code
@@ -12,4 +13,4 @@ jobs:
     - name: setup-node
       uses: actions/setup-node@v4
       with:
-        node-version: 18.x
+        node-version: ${{ matrix.node-version }}

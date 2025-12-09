@@ -9,6 +9,9 @@ jobs:
         include:
           - node-version: 18
             os-version: ubuntu-latest
+        exclude:
+          - node-version: [12,14]
+            os-version: [windows-latest]
     runs-on: ${{ matrix.os-version }}
     steps:
     - name: checkout code

@@ -1,0 +1,27 @@
+name: workflow and repository details
+on: [push]
+jobs:
+  workflow-job-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display
+        run: echo "display working directory and env variables"
+      - name: run shell commands
+        run: |
+          ls
+          pwd
+          echo $GITHUB_OUTPUT
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_SHA
+  workflow-job-windows:
+    runs-on: windows-latest
+    steps:
+      - name: display
+        run: echo "display working directory and env variables"
+      - name: run shell commands
+        run: |
+          ls
+          pwd
+          echo $GITHUB_OUTPUT
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_SHA

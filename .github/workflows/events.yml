@@ -9,5 +9,6 @@ jobs:
           echo "$GITHUB_WORKSPACE"
           echo "$GITHUB_SHA"
           echo "$GITHUB_REF"
-      - name: use checkout action 
+      - name: checkout code
+
         uses: actions/checkout@v4

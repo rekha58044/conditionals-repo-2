@@ -1,0 +1,13 @@
+name: events-workflow
+on: [push, pull_request, issues]
+jobs:
+  event-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display the event info
+        run: |
+          echo "$GITHUB_WORKSPACE"
+          echo "$GITHUB_SHA"
+          echo "$GITHUB_REF"
+      - name: use checkout action 
+        uses: actions/checkout@v4

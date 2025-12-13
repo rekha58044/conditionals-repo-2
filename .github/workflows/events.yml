@@ -1,10 +1,10 @@
 name: events-workflow
-on: [push, pull_request, issues]
+on: [push]
 jobs:
   event-job:
     runs-on: ubuntu-latest
     steps:
-      - name: display the event info
+      - name: display the event info of rrepo
         run: |
           echo "$GITHUB_WORKSPACE"
           echo "$GITHUB_SHA"

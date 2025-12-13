@@ -1,0 +1,12 @@
+name: workflow run
+on:
+  workflow_run:
+    workflows: [events workflow]
+    types: [completed]
+jobs:
+  workflow-run-job:
+    runs-on: ubuntu-latest
+    steps:
+        - name: display message
+          run: echo " this workflow is triggered after the completion of the events workflow"
+     

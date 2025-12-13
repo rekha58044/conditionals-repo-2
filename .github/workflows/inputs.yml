@@ -1,0 +1,19 @@
+name: inputs workflow
+on: 
+ workflow_dispatch:
+    inputs:
+      name: 
+        description: this input is to enter the name
+        type: string
+        required: true
+        default: user1
+
+jobs:
+  inputs:
+    runs-on: ubuntu-latest
+    steps:
+        - name: message
+          run: echo " this is inputs workflow"
+        - name: display the inputs
+          run: |
+            echo " the name is : ${{inputs.name}}"

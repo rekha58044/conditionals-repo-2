@@ -4,6 +4,7 @@ run-name: "this workflow is created by ${{github.actor}}, event: ${{github.event
 jobs:
   contexts:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     steps:
       - name: expressions
         run: |

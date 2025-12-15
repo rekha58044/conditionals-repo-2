@@ -6,9 +6,12 @@ jobs:
     steps: 
       - name: sleep
         run: sleep 20
+      - name: step2
+        id: step2
+        run: exit 1
       - name: runs on failure
-        if: failure()
-        run: echo " this runs on failure"
+        if: failure() && steps.step2.conclusion == 'failure'
+        run: echo " this runs on failure of step2"
       - name: runs always
         if: always()
         run: echo "this workflow always runs"

@@ -13,8 +13,8 @@ jobs:
           echo ${{ 1 < 20 }}
       - name: contexts
         run: |
-          echo ${{ toJson(github)}}
-          echo ${{ toJson(steps)}}
-          echo ${{ toJson(runner)}}
-          echo ${{ toJson(steps)}}
-          echo ${{ toJson(job)}}
+          echo '${{ toJson(github)}}'
+          echo '${{ toJson(steps)}}'
+          echo '${{ toJson(runner)}}'
+          echo '${{ toJson(steps)}}'
+          echo '${{ toJson(job)}}'

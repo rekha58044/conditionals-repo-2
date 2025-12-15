@@ -1,6 +1,6 @@
 name: contexts and workflows
 on: [push,workflow_dispatch]
-run-name: this workflow is created by ${{github.actor}}
+run-name: "this workflow is created by ${{github.actor}}, event: ${{github.event_name}}"
 jobs:
   contexts:
     runs-on: ubuntu-latest

@@ -1,0 +1,20 @@
+name: contexts and workflows
+on: [push,workflow_dispatch]
+jobs:
+  contexts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: expressions
+        run: |
+          echo ${{ 1 >2 }}
+          echo ${{ true }}
+          echo ${{ true && false }}
+          echo ${{ 'steps' == 'Steps' }}
+          echo ${{ 1 < 20 }}
+      - name: contexts
+        run: |
+          echo ${{ toJson(github)}}
+          echo ${{ toJson(steps)}}
+          echo ${{ toJson(runner)}}
+          echo ${{ toJson(steps)}}
+          echo ${{ toJson(job)}}

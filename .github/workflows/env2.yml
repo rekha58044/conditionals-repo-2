@@ -1,0 +1,13 @@
+name: variables workflow
+
+on: push
+
+jobs:
+  var-job:
+    runs-on: ${{ vars.JOB_RUNNER }}
+    env:
+      ENV_LEVEL: ${{ vars.ENV_LEVEL }}
+    steps:
+      - name: display env level
+        run: | 
+          echo "ENV_LEVEL: $ENV_LEVEL"

@@ -4,7 +4,7 @@ on: push
 
 jobs:
   var-job:
-    environment: 'development'
+    environment: 'production'
     runs-on: ${{ vars.JOB_RUNNER }}
     env:
       ENV_NAME: ${{ vars.ENV_NAME }}

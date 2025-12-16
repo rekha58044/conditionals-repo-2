@@ -11,6 +11,7 @@ jobs:
       USERNAME: ${{secrets.USERNAME}}
     steps:
       - name: display env level
+        if: env.ENV_NAME == 'development-environment'
         run: | 
           echo "ENV_NAMEL: $ENV_NAME"
           echo "${{vars.JOB_RUNNER}}"

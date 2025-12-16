@@ -4,13 +4,14 @@ on: push
 
 jobs:
   var-job:
+    environment: 'production'
     runs-on: ${{ vars.JOB_RUNNER }}
     env:
-      ENV_LEVEL: ${{ vars.ENV_LEVEL }}
+      ENV_NAME: ${{ vars.ENV_NAME }}
       USERNAME: ${{secrets.USERNAME}}
     steps:
       - name: display env level
         run: | 
-          echo "ENV_LEVEL: $ENV_LEVEL"
+          echo "ENV_NAMEL: $ENV_NAME"
           echo "${{vars.JOB_RUNNER}}"
           echo "username: $USERNAME"

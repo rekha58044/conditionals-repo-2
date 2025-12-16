@@ -11,3 +11,4 @@ jobs:
       - name: display env level
         run: | 
           echo "ENV_LEVEL: $ENV_LEVEL"
+          echo "${{vars.JOB_RUNNER}}"

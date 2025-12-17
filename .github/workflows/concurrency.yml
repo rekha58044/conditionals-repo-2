@@ -1,0 +1,8 @@
+name: concurrency-1
+on: workflow_dispatch
+jobs:
+  concurrency-job:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: concurrency job-1
+        run: echo "this is concurrency job"

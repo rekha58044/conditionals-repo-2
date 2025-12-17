@@ -1,0 +1,11 @@
+name: reusable workflow-1
+on: workflow_dispatch
+jobs:
+  reusable-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: call reusable workflow from other repo
+        uses: rekha58044/reusable-repository/.github/workflows/reusable.yml@main
+        with: 
+          environment: production
+            

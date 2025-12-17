@@ -1,5 +1,6 @@
 name: concurrency-1
 on: workflow_dispatch
+concurrency: concurrency-one
 jobs:
   concurrency-job:
     runs-on: ubuntu-latest
